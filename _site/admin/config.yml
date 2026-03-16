@@ -25,7 +25,7 @@ collections:
   # Client clicks "New Project" and fills out the form below.
   - name: "projects"
     label: "Projects"
-    folder: "content/projects"
+    folder: "src/projects"
     create: true          # Clients CAN add new projects
     slug: "{{slug}}"
     fields:
@@ -56,6 +56,8 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Icon (emoji)", name: "icon", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image URL", name: "image", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", required: false, field: { label: "Feature", name: "feature", widget: "string" } }
 
   # --- TESTIMONIALS ---
   - name: "testimonials"
