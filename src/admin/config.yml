@@ -1,0 +1,90 @@
+# ============================================
+# DECAP CMS CONFIGURATION
+# This file defines the entire editing experience
+# your client sees when they log in to the CMS.
+# ============================================
+
+backend:
+  name: git-gateway  # Connects to your Git repo via Netlify Identity
+  branch: main
+
+# Where uploaded images go
+media_folder: "src/img"
+public_folder: "/img"
+
+# ============================================
+# CONTENT COLLECTIONS
+# Each collection below becomes a section
+# in the CMS sidebar that clients can edit.
+# ============================================
+
+collections:
+
+  # --- PROJECTS ---
+  # Each project is a Markdown file.
+  # Client clicks "New Project" and fills out the form below.
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true          # Clients CAN add new projects
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select",
+          options: ["New Construction", "Renovation", "Addition", "Commercial Buildout"] }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Year", name: "year", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text",
+          hint: "Short description shown on project cards (1-2 sentences)" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Featured on Homepage?", name: "featured", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # --- SERVICES ---
+  # Single JSON file with a list of services.
+  - name: "services"
+    label: "Services"
+    files:
+      - label: "Service List"
+        name: "services"
+        file: "src/_data/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # --- TESTIMONIALS ---
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - label: "Testimonial List"
+        name: "testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Project", name: "project", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+
+  # --- SITE SETTINGS ---
+  # Global settings like company name, phone, address.
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "site"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Company Name", name: "name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Description (SEO)", name: "description", widget: "text" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }

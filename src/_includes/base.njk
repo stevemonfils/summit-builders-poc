@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- ============================================
+       HEADER — Content comes from _data/site.json
+       Edit site.json to change company name, phone, etc.
+       ============================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">▲</span>
+        <span class="logo-text">{{ site.name }}</span>
+      </a>
+      <nav class="main-nav">
+        {% for item in site.navigation %}
+          <a href="{{ item.url }}" class="nav-link {% if page.url == item.url %}active{% endif %}">{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+      <a href="tel:{{ site.phone }}" class="header-cta">{{ site.phone }}</a>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <!-- ============================================
+       FOOTER — Also driven by _data/site.json
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">▲</span>
+        <span class="logo-text">{{ site.name }}</span>
+        <p class="footer-tagline">{{ site.tagline }}</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <p>{{ site.phone }}</p>
+        <p>{{ site.email }}</p>
+        <p>{{ site.address }}</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        {% for item in site.navigation %}
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ site.currentYear }} {{ site.name }}. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

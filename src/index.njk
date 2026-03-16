@@ -1,0 +1,118 @@
+---
+layout: base.njk
+title: Home
+description: "Premier general contractor serving the Greater Chicago Area."
+---
+
+{# ============================================
+   HERO SECTION
+   The content below is hardcoded in the template.
+   For a real site, this could pull from a markdown
+   file or JSON data — making it CMS-editable.
+   ============================================ #}
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label">General Contractor — Greater Chicago Area</p>
+    <h1 class="hero-title">We Build<br><em>It Right.</em></h1>
+    <p class="hero-subtitle">Residential & commercial construction with 25+ years of precision craftsmanship.</p>
+    <div class="hero-actions">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="/projects/" class="btn btn-outline">View Our Work</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-number">25+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">500+</span>
+      <span class="stat-label">Projects Completed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Licensed & Insured</span>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   SERVICES SECTION
+   Services data comes from _data/services.json
+   The client can edit that file via Decap CMS.
+   ============================================ #}
+<section class="services-preview">
+  <div class="section-inner">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      {% for service in services %}
+        <div class="service-card">
+          <div class="service-icon">{{ service.icon }}</div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   FEATURED PROJECTS
+   Projects are individual Markdown files in
+   content/projects/. Each .md file = one project.
+   Decap CMS lets clients add new ones easily.
+   ============================================ #}
+<section class="projects-preview">
+  <div class="section-inner">
+    <p class="section-label">Our Work</p>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      {% for project in collections.projects | reverse %}
+        {% if loop.index <= 3 %}
+        <article class="project-card">
+          <div class="project-image" style="background-color: var(--color-charcoal);">
+            <span class="project-category">{{ project.data.category }}</span>
+          </div>
+          <div class="project-info">
+            <h3>{{ project.data.title }}</h3>
+            <p>{{ project.data.summary }}</p>
+            <span class="project-meta">{{ project.data.location }} · {{ project.data.year }}</span>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/projects/" class="btn btn-primary">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   TESTIMONIAL
+   Pulled from _data/testimonials.json
+   ============================================ #}
+<section class="testimonial-section">
+  <div class="section-inner">
+    <blockquote class="testimonial">
+      <p>"{{ testimonials[0].quote }}"</p>
+      <cite>
+        <strong>{{ testimonials[0].name }}</strong>
+        <span>{{ testimonials[0].project }}</span>
+      </cite>
+    </blockquote>
+  </div>
+</section>
+
+{# ============================================
+   CTA SECTION
+   ============================================ #}
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Get a free estimate from our team. We'll walk your site, discuss your vision, and deliver a detailed proposal.</p>
+    <a href="/contact/" class="btn btn-primary btn-large">Request a Free Estimate</a>
+  </div>
+</section>

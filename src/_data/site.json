@@ -1,0 +1,21 @@
+{
+  "name": "Torres",
+  "tagline": "We Build It Right.",
+  "description": "Premier general contractor serving the Greater Chicago Area. Residential and commercial construction, renovations, and project management.",
+  "phone": "(630) 555-1234",
+  "email": "info@summitbuilders.com",
+  "address": "412 Main Street, Downers Grove, IL 60515",
+  "currentYear": "2026",
+  "navigation": [
+    { "label": "Home", "url": "/" },
+    { "label": "Services", "url": "/services/" },
+    { "label": "Projects", "url": "/projects/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Contact", "url": "/contact/" }
+  ],
+  "social": {
+    "facebook": "https://facebook.com/summitbuilders",
+    "instagram": "https://instagram.com/summitbuilders",
+    "linkedin": "https://linkedin.com/company/summitbuilders"
+  }
+}

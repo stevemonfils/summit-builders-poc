@@ -1,0 +1,32 @@
+[
+  {
+    "title": "New Construction",
+    "icon": "🏗️",
+    "description": "Ground-up residential and commercial builds. From foundation to finish, we manage every phase with precision and care."
+  },
+  {
+    "title": "Renovations",
+    "icon": "🔨",
+    "description": "Kitchen remodels, bathroom upgrades, basement finishing, and whole-home renovations that transform your space."
+  },
+  {
+    "title": "Additions",
+    "icon": "📐",
+    "description": "Room additions, second stories, and bump-outs that seamlessly blend with your home's existing architecture."
+  },
+  {
+    "title": "Commercial Buildouts",
+    "icon": "🏢",
+    "description": "Retail spaces, restaurants, offices, and tenant improvements built to code and delivered on schedule."
+  },
+  {
+    "title": "Project Management",
+    "icon": "📋",
+    "description": "Full-service construction management including scheduling, permitting, subcontractor coordination, and inspections."
+  },
+  {
+    "title": "Emergency Repairs",
+    "icon": "⚡",
+    "description": "Storm damage, structural issues, and urgent repairs handled quickly with quality workmanship."
+  }
+]
