@@ -1,5 +1,6 @@
-[
-  {
+{
+  "services": [
+    {
     "title": "New Construction",
     "icon": "🏗️",
     "description": "Ground-up residential and commercial builds. From foundation to finish, we manage every phase with precision and care.",
@@ -71,4 +72,5 @@
       "24-hour emergency response"
     ]
   }
-]
+  ]
+}

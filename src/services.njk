@@ -24,7 +24,7 @@ description: "Full-service general contracting for residential and commercial pr
    ============================================ #}
 <section class="services-detail">
   <div class="section-inner">
-    {% for service in services %}
+    {% for service in services.services %}
     <div class="service-detail-card {% if loop.index is odd %}card-left{% else %}card-right{% endif %}">
       <div class="service-detail-image" style="background-image: url('{{ service.image }}');"></div>
       <div class="service-detail-content">

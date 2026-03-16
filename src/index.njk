@@ -36,7 +36,7 @@ description: "Premier general contractor serving the Greater Chicago Area."
     <p class="section-label">What We Do</p>
     <h2 class="section-title">Our Services</h2>
     <div class="services-grid">
-      {% for service in services %}
+      {% for service in services.services %}
         <div class="service-card">
           <div class="service-icon">{{ service.icon }}</div>
           <h3>{{ service.title }}</h3>
