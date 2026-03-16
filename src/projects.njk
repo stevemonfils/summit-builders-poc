@@ -1,0 +1,55 @@
+---
+layout: base.njk
+title: Projects
+description: "Browse our portfolio of residential and commercial construction projects across the Greater Chicago Area."
+---
+
+{# ============================================
+   PROJECTS PAGE HERO
+   ============================================ #}
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="hero-label">Our Work</p>
+    <h1 class="page-hero-title">Projects</h1>
+    <p class="page-hero-subtitle">25 years of craftsmanship across the Greater Chicago Area. Browse our residential and commercial portfolio.</p>
+  </div>
+</section>
+
+{# ============================================
+   PROJECT FILTER TABS
+   Pure CSS/HTML — no JavaScript needed
+   ============================================ #}
+<section class="projects-listing">
+  <div class="section-inner">
+    <div class="projects-full-grid">
+      {% for project in collections.projects | reverse %}
+      <article class="project-card-full">
+        <div class="project-card-image" style="background-image: url('{{ project.data.image | default('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80') }}');">
+          <span class="project-category">{{ project.data.category }}</span>
+        </div>
+        <div class="project-card-body">
+          <h2>{{ project.data.title }}</h2>
+          <p>{{ project.data.summary }}</p>
+          <div class="project-card-meta">
+            <span>📍 {{ project.data.location }}</span>
+            <span>📅 {{ project.data.year }}</span>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   CTA
+   ============================================ #}
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>Have a Project in Mind?</h2>
+    <p>We'd love to hear about it. Reach out for a free consultation and estimate.</p>
+    <a href="/contact/" class="btn btn-primary btn-large">Get a Free Estimate</a>
+  </div>
+</section>

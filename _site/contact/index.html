@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Torres</title>
+  <meta name="description" content="Get in touch with Summit Builders for a free estimate on your residential or commercial construction project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- ============================================
+       HEADER — Content comes from _data/site.json
+       Edit site.json to change company name, phone, etc.
+       ============================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">▲</span>
+        <span class="logo-text">Torres</span>
+      </a>
+      <nav class="main-nav">
+        
+          <a href="/" class="nav-link ">Home</a>
+        
+          <a href="/services/" class="nav-link ">Services</a>
+        
+          <a href="/projects/" class="nav-link ">Projects</a>
+        
+          <a href="/about/" class="nav-link ">About</a>
+        
+          <a href="/contact/" class="nav-link active">Contact</a>
+        
+      </nav>
+      <a href="tel:(630) 555-1234" class="header-cta">(630) 555-1234</a>
+    </div>
+  </header>
+
+  <main>
+    
+
+<section class="page-hero page-hero-short">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="hero-label">Let's Talk</p>
+    <h1 class="page-hero-title">Contact Us</h1>
+    <p class="page-hero-subtitle">Ready to start your project? We'd love to hear about it.</p>
+  </div>
+</section>
+
+
+<section class="contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      
+      <div class="contact-form-wrap">
+        <h2>Request a Free Estimate</h2>
+        <p class="form-intro">Tell us about your project and we'll get back to you within one business day.</p>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          
+          <p class="hidden-field">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project-type">
+                <option value="">Select one...</option>
+                <option value="new-construction">New Construction</option>
+                <option value="renovation">Renovation</option>
+                <option value="addition">Addition</option>
+                <option value="commercial">Commercial Buildout</option>
+                <option value="emergency">Emergency Repair</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Estimated Budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select range...</option>
+                <option value="under-25k">Under $25,000</option>
+                <option value="25k-50k">$25,000 – $50,000</option>
+                <option value="50k-100k">$50,000 – $100,000</option>
+                <option value="100k-250k">$100,000 – $250,000</option>
+                <option value="250k-500k">$250,000 – $500,000</option>
+                <option value="500k-plus">$500,000+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Describe your project, timeline, and any details that would help us understand your vision."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="how-heard">How Did You Hear About Us?</label>
+            <select id="how-heard" name="how-heard">
+              <option value="">Select one...</option>
+              <option value="referral">Referral from a friend/neighbor</option>
+              <option value="google">Google Search</option>
+              <option value="social">Social Media</option>
+              <option value="sign">Saw our sign at a job site</option>
+              <option value="returning">Returning client</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">Send My Request</button>
+        </form>
+      </div>
+
+      
+      <div class="contact-info-sidebar">
+        <div class="contact-info-card">
+          <h3>Contact Information</h3>
+          <div class="contact-detail">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:(630) 555-1234">(630) 555-1234</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@summitbuilders.com">info@summitbuilders.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Office</strong>
+              <p>412 Main Street, Downers Grove, IL 60515</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Monday – Friday: 7am – 5pm</p>
+              <p>Saturday: By appointment</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>Service Area</h3>
+          <p>We serve the Greater Chicago Area including DuPage, Cook, Will, and Kane counties. Our core service area includes:</p>
+          <div class="service-area-list">
+            <span>Downers Grove</span>
+            <span>Naperville</span>
+            <span>Hinsdale</span>
+            <span>Clarendon Hills</span>
+            <span>Westmont</span>
+            <span>Lisle</span>
+            <span>Wheaton</span>
+            <span>Glen Ellyn</span>
+            <span>Lombard</span>
+            <span>Oak Brook</span>
+            <span>Western Springs</span>
+            <span>La Grange</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER — Also driven by _data/site.json
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">▲</span>
+        <span class="logo-text">Torres</span>
+        <p class="footer-tagline">We Build It Right.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <p>(630) 555-1234</p>
+        <p>info@summitbuilders.com</p>
+        <p>412 Main Street, Downers Grove, IL 60515</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        
+          <a href="/">Home</a>
+        
+          <a href="/services/">Services</a>
+        
+          <a href="/projects/">Projects</a>
+        
+          <a href="/about/">About</a>
+        
+          <a href="/contact/">Contact</a>
+        
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Torres. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

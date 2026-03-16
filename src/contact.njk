@@ -1,0 +1,165 @@
+---
+layout: base.njk
+title: Contact
+description: "Get in touch with Summit Builders for a free estimate on your residential or commercial construction project."
+---
+
+{# ============================================
+   CONTACT PAGE HERO
+   ============================================ #}
+<section class="page-hero page-hero-short">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="hero-label">Let's Talk</p>
+    <h1 class="page-hero-title">Contact Us</h1>
+    <p class="page-hero-subtitle">Ready to start your project? We'd love to hear about it.</p>
+  </div>
+</section>
+
+{# ============================================
+   CONTACT CONTENT
+   ============================================ #}
+<section class="contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      {# --- CONTACT FORM ---
+         Uses Netlify Forms — no backend needed.
+         The form submissions show up in your Netlify dashboard.
+         Just add data-netlify="true" and Netlify handles the rest.
+      #}
+      <div class="contact-form-wrap">
+        <h2>Request a Free Estimate</h2>
+        <p class="form-intro">Tell us about your project and we'll get back to you within one business day.</p>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          {# Honeypot field — hidden from users, catches spam bots #}
+          <p class="hidden-field">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project-type">
+                <option value="">Select one...</option>
+                <option value="new-construction">New Construction</option>
+                <option value="renovation">Renovation</option>
+                <option value="addition">Addition</option>
+                <option value="commercial">Commercial Buildout</option>
+                <option value="emergency">Emergency Repair</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Estimated Budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select range...</option>
+                <option value="under-25k">Under $25,000</option>
+                <option value="25k-50k">$25,000 – $50,000</option>
+                <option value="50k-100k">$50,000 – $100,000</option>
+                <option value="100k-250k">$100,000 – $250,000</option>
+                <option value="250k-500k">$250,000 – $500,000</option>
+                <option value="500k-plus">$500,000+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Describe your project, timeline, and any details that would help us understand your vision."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="how-heard">How Did You Hear About Us?</label>
+            <select id="how-heard" name="how-heard">
+              <option value="">Select one...</option>
+              <option value="referral">Referral from a friend/neighbor</option>
+              <option value="google">Google Search</option>
+              <option value="social">Social Media</option>
+              <option value="sign">Saw our sign at a job site</option>
+              <option value="returning">Returning client</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">Send My Request</button>
+        </form>
+      </div>
+
+      {# --- CONTACT INFO SIDEBAR --- #}
+      <div class="contact-info-sidebar">
+        <div class="contact-info-card">
+          <h3>Contact Information</h3>
+          <div class="contact-detail">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Office</strong>
+              <p>{{ site.address }}</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Monday – Friday: 7am – 5pm</p>
+              <p>Saturday: By appointment</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>Service Area</h3>
+          <p>We serve the Greater Chicago Area including DuPage, Cook, Will, and Kane counties. Our core service area includes:</p>
+          <div class="service-area-list">
+            <span>Downers Grove</span>
+            <span>Naperville</span>
+            <span>Hinsdale</span>
+            <span>Clarendon Hills</span>
+            <span>Westmont</span>
+            <span>Lisle</span>
+            <span>Wheaton</span>
+            <span>Glen Ellyn</span>
+            <span>Lombard</span>
+            <span>Oak Brook</span>
+            <span>Western Springs</span>
+            <span>La Grange</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

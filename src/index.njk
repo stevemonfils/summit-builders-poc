@@ -4,13 +4,7 @@ title: Home
 description: "Premier general contractor serving the Greater Chicago Area."
 ---
 
-{# ============================================
-   HERO SECTION
-   The content below is hardcoded in the template.
-   For a real site, this could pull from a markdown
-   file or JSON data — making it CMS-editable.
-   ============================================ #}
-<section class="hero">
+<section class="hero" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80');">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-label">General Contractor — Greater Chicago Area</p>
@@ -37,11 +31,6 @@ description: "Premier general contractor serving the Greater Chicago Area."
   </div>
 </section>
 
-{# ============================================
-   SERVICES SECTION
-   Services data comes from _data/services.json
-   The client can edit that file via Decap CMS.
-   ============================================ #}
 <section class="services-preview">
   <div class="section-inner">
     <p class="section-label">What We Do</p>
@@ -58,12 +47,6 @@ description: "Premier general contractor serving the Greater Chicago Area."
   </div>
 </section>
 
-{# ============================================
-   FEATURED PROJECTS
-   Projects are individual Markdown files in
-   content/projects/. Each .md file = one project.
-   Decap CMS lets clients add new ones easily.
-   ============================================ #}
 <section class="projects-preview">
   <div class="section-inner">
     <p class="section-label">Our Work</p>
@@ -72,7 +55,7 @@ description: "Premier general contractor serving the Greater Chicago Area."
       {% for project in collections.projects | reverse %}
         {% if loop.index <= 3 %}
         <article class="project-card">
-          <div class="project-image" style="background-color: var(--color-charcoal);">
+          <div class="project-image" style="background-image: url('{{ project.data.image | default('') }}'); background-color: var(--color-charcoal);">
             <span class="project-category">{{ project.data.category }}</span>
           </div>
           <div class="project-info">
@@ -90,10 +73,6 @@ description: "Premier general contractor serving the Greater Chicago Area."
   </div>
 </section>
 
-{# ============================================
-   TESTIMONIAL
-   Pulled from _data/testimonials.json
-   ============================================ #}
 <section class="testimonial-section">
   <div class="section-inner">
     <blockquote class="testimonial">
@@ -106,9 +85,6 @@ description: "Premier general contractor serving the Greater Chicago Area."
   </div>
 </section>
 
-{# ============================================
-   CTA SECTION
-   ============================================ #}
 <section class="cta-section">
   <div class="section-inner">
     <h2>Ready to Start Your Project?</h2>

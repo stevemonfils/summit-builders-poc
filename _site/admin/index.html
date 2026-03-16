@@ -4,14 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager — Summit Builders</title>
-  <!-- 
-    This single HTML file IS the entire CMS admin interface.
-    Decap CMS loads from a CDN and reads config.yml to know
-    what content the client can edit. That's it. No install needed.
-  -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- The CMS interface renders here automatically -->
+  <div id="nc-root"></div>
+  <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: Services
+description: "Full-service general contracting for residential and commercial projects across the Greater Chicago Area."
+---
+
+{# ============================================
+   SERVICES PAGE HERO
+   ============================================ #}
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="hero-label">What We Do</p>
+    <h1 class="page-hero-title">Our Services</h1>
+    <p class="page-hero-subtitle">From blueprint to final walkthrough, we manage every phase of your construction project with precision and care.</p>
+  </div>
+</section>
+
+{# ============================================
+   SERVICES DETAIL GRID
+   Each service gets an expanded card with more detail.
+   Data comes from _data/services.json
+   ============================================ #}
+<section class="services-detail">
+  <div class="section-inner">
+    {% for service in services %}
+    <div class="service-detail-card {% if loop.index is odd %}card-left{% else %}card-right{% endif %}">
+      <div class="service-detail-image" style="background-image: url('{{ service.image }}');"></div>
+      <div class="service-detail-content">
+        <span class="service-detail-icon">{{ service.icon }}</span>
+        <h2>{{ service.title }}</h2>
+        <p class="service-detail-desc">{{ service.description }}</p>
+        {% if service.features %}
+        <ul class="service-features">
+          {% for feature in service.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ============================================
+   PROCESS SECTION
+   ============================================ #}
+<section class="process-section">
+  <div class="section-inner">
+    <p class="section-label">How We Work</p>
+    <h2 class="section-title">Our Process</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="process-number">01</span>
+        <h3>Consultation</h3>
+        <p>We meet at your site, discuss your vision, review plans, and identify any challenges before a single nail is driven.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-number">02</span>
+        <h3>Proposal & Planning</h3>
+        <p>You receive a detailed, transparent proposal with line-item costs, a realistic timeline, and a clear scope of work.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-number">03</span>
+        <h3>Construction</h3>
+        <p>Our team manages every subcontractor, inspection, and material delivery. You get weekly updates and direct access to your project manager.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-number">04</span>
+        <h3>Final Walkthrough</h3>
+        <p>We walk every inch together. Nothing is complete until you're completely satisfied with the finished product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============================================
+   CTA
+   ============================================ #}
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Get a free estimate from our team. We'll walk your site, discuss your vision, and deliver a detailed proposal.</p>
+    <a href="/contact/" class="btn btn-primary btn-large">Request a Free Estimate</a>
+  </div>
+</section>
